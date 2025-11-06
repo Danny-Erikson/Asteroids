@@ -6,6 +6,7 @@ import pygame
 # constants from constants.py
 from constants import *
 from player import Player
+from logger import log_state
 
 
 def main():
@@ -25,6 +26,8 @@ def main():
     player = Player(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2)
 
     while True:
+        log_state()
+
         # Handler for quitting
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -37,7 +40,6 @@ def main():
         for obj in drawable:
             obj.draw(screen)
 
-        player.draw(screen)
         pygame.display.flip()
 
         # Locks the game to 60 FPS
