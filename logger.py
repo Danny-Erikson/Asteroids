@@ -1,3 +1,5 @@
+# Log functions build by Boot.dev team
+
 import inspect
 import json
 import math
